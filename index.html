@@ -10,109 +10,74 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
-
     header {
       background-color: #333;
-      color: #fff;
-      padding: 1em;
+      padding: 1rem;
     }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1em;
-    }
-
-    nav a {
-      color: #fff;
+    header nav a {
+      color: white;
+      margin: 0 1rem;
       text-decoration: none;
-      padding: 0.5em 1em;
     }
-
-    .banner {
+    .banner-container {
       position: relative;
+      display: inline-block;
       width: 100%;
-      max-height: 450px;
+      max-width: 100%;
       overflow: hidden;
     }
-
-    .banner-container {
-      display: flex;
-      justify-content: center;
-    }
-
-    .banner img {
-      width: auto;
-      height: 100%;
-      max-height: 450px;
-    }
-
-    .banner-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 2em;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 0.5em 1em;
-      border-radius: 10px;
-    }
-
-    .section {
-      padding: 2em;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .map img {
+    .banner-container img {
       width: 100%;
       height: auto;
-      max-width: 600px;
+      display: block;
     }
-
+    .banner-text {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+    .content {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
     footer {
       background-color: #f0f0f0;
-      padding: 1.5em;
-      font-size: 0.9em;
-      line-height: 1.6;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
     }
-
+    .map img {
+      max-width: 100%;
+      height: auto;
+    }
     form {
-      margin-top: 2em;
+      margin-top: 2rem;
     }
-
-    form input, form textarea {
+    input, textarea {
+      width: 90%;
+      max-width: 400px;
+      margin: 0.5rem auto;
       display: block;
-      width: 80%;
-      max-width: 500px;
-      margin: 1em auto;
-      padding: 0.5em;
+      padding: 0.5rem;
     }
-
-    form button {
-      padding: 0.5em 2em;
-    }
-
-    .lang-switch {
-      margin-top: 1em;
+    button {
+      padding: 0.5rem 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>路加合同会社</h1>
     <nav>
-      <a href="#services">事業内容</a>
-      <a href="#contact">お問い合わせ</a>
-      <a href="#map">所在地</a>
+      <a href="#business">業務内容</a>
+      <a href="#contact">連絡先</a>
+      <a href="#form">お問い合わせ</a>
     </nav>
-    <div class="lang-switch">
-      <button onclick="switchLang('ja')">日本語</button>
-      <button onclick="switchLang('zh')">中文</button>
-    </div>
   </header>
 
   <div class="banner">
@@ -122,54 +87,50 @@
     </div>
   </div>
 
-  <section class="section" id="services">
-    <h2>事業内容</h2>
+  <div class="content" id="business">
+    <h2>事業内容 / 业务内容</h2>
     <ul>
-      <li>生活サポート翻訳（病院同行・予約代行・役所手続き・運転免許申請など）</li>
-      <li>ビザ・資格外活動許可指導</li>
-      <li>来日ログイン、印章・銀行口座・法人登記・携帯契約サポート</li>
-      <li>国民年金・健康保険・厚生年金の申請・減免・免除サポート</li>
-      <li>医療用品、医療機器、衛生用品、介護用品及び関連商品の企画・製造・販売・輸出入</li>
-      <li>医薬品・漢方・健康食品・栄養食品の企画・開発・販売・輸出入</li>
-      <li>日用品・化粧品・玩具・アパレル製品・雑貨・電子製品の企画・販売・輸出入</li>
-      <li>国内・国際貨物運送、梱包、倉庫、通関業</li>
-      <li>旅行業・宿泊施設及び飲食店運営</li>
-      <li>国家戦略特区住宅宿泊事業</li>
-      <li>不動産の売買・仲介・賃貸及びコンサルティング</li>
-      <li>起業・経営コンサルティング</li>
-      <li>医療・介護に関する情報提供とコンサルティング</li>
-      <li>古物の売買・代理・輸出入</li>
+      <li>生活サポート翻訳（病院同行・予約代行・役所手続き・運転免許申請など） / 生活支援翻译（陪同就诊、预约代办、役所手续、驾照申请等）</li>
+      <li>ビザ・資格外活動許可指導 / 签证・资格外活动许可指导</li>
+      <li>来日ログイン、印章・銀行口座・法人登記・携帯契約サポート / 登录日本、印章、银行账户、法人登记、手机契约支援</li>
+      <li>国民年金・健康保険・厚生年金の申請・減免・免除サポート / 申请国民年金、健康保险、厚生年金及其减免</li>
+      <li>医療用品、医療機器、衛生用品、介護用品及び関連商品の企画・製造・販売・輸出入 / 医疗用品、器械、卫生和护理商品的企划、生产、销售与进出口</li>
+      <li>医薬品・漢方・健康食品・栄養食品の企画・開発・販売・輸出入 / 医药品、中药、健康食品的企划、开发、销售与进出口</li>
+      <li>日用品・化粧品・玩具・アパレル製品・雑貨・電子製品の企画・販売・輸出入 / 日用品、化妆品、玩具、服饰、杂货、电子产品的企划、销售与进出口</li>
+      <li>国内・国際貨物運送、梱包、倉庫、通関業 / 国内外货运、打包、仓储、报关</li>
+      <li>旅行業・宿泊施設及び飲食店運営 / 旅行、住宿、餐饮事业经营</li>
+      <li>国家戦略特区住宅宿泊事業 / 国家战略特区住宅民宿事业</li>
+      <li>不動産の売買・仲介・賃貸及びコンサルティング / 房地产买卖、仲介、租赁及咨询</li>
+      <li>起業・経営コンサルティング / 创业与经营咨询</li>
+      <li>医療・介護に関する情報提供とコンサルティング / 医疗与介护信息提供与咨询</li>
+      <li>古物の売買・代理・輸出入 / 古物买卖、代理、进出口</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="section" id="contact">
+  <div class="content" id="contact">
+    <footer>
+      所在地：大阪府大阪市西成区<br>
+      最寄駅：津守駅 / 今宮駅 / 花園町駅<br><br>
+      📞 090-2904-1534 / 070-2243-9592<br>
+      📧 gaob8405@gmail.com<br>
+      📱 WeChat ID：g17767743741<br><br>
+      業務対応時間：平日 9:00〜20:00 / 土日祝 9:00〜18:00<br><br>
+      <div class="map">
+        <img src="images/imagesmap.png" alt="会社所在地マップ">
+      </div><br>
+
+      無断転載・剽窃禁止 Copyright © 2025 路加合同会社
+    </footer>
+  </div>
+
+  <div class="content" id="form">
     <h2>お問い合わせ</h2>
-    <form>
-      <input type="text" placeholder="お名前 / 姓名">
-      <input type="email" placeholder="メールアドレス / 电子邮件">
-      <textarea rows="4" placeholder="お問い合わせ内容 / 咨询内容"></textarea>
-      <button type="submit">送信 / 提交</button>
+    <form action="https://formsubmit.co/gaob8405@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="お名前 / 姓名" required>
+      <input type="email" name="email" placeholder="メールアドレス / 邮箱" required>
+      <textarea name="message" rows="5" placeholder="メッセージ / 留言内容" required></textarea>
+      <button type="submit">送信 / 发送</button>
     </form>
-  </section>
-
-  <section class="section map" id="map">
-    <img src="images/imagesmap.png" alt="会社所在地マップ">
-  </section>
-
-  <footer>
-    所在地：大阪府大阪市西成区<br>
-    最寄駅：津守駅 / 今宮駅 / 花園町駅<br><br>
-    📞 090-2904-1534 / 070-2243-9592<br>
-    📧 gaob8405@gmail.com<br>
-    📱 WeChat ID：g17767743741<br><br>
-    業務対応時間：平日 9:00∼20:00 / 土日祝 9:00∼18:00<br><br>
-    無断転載・剽窃禁止 Copyright © 2025 路加合同会社
-  </footer>
-
-  <script>
-    function switchLang(lang) {
-      alert('多语言切换功能可通过 JavaScript 国际化库实现，例如 i18next。当前仅为演示按钮。');
-    }
-  </script>
+  </div>
 </body>
 </html>
