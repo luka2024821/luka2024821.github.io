@@ -2,166 +2,137 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>路加合同会社</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: Arial, sans-serif;
       background: #f7f7f7;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
     header {
       background: #003366;
       color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 1.8em;
+      padding: 20px 0;
+      font-size: 2em;
+      position: relative;
     }
     .lang-switch {
-      text-align: right;
-      padding: 10px;
-      margin-right: 10px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
-    .lang-switch button {
-      background: #003366;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      margin-left: 5px;
-      cursor: pointer;
-      border-radius: 4px;
+    .banner {
+      margin: 20px 0;
     }
-    .banner img {
+    .banner-container {
+      position: relative;
+      display: inline-block;
+      width: 80%;
+      max-width: 800px;
+    }
+    .banner-container img {
       width: 100%;
-      max-width: 1000px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 8px;
+      border-radius: 10px;
     }
-    .services, .contact, .station {
-      background: #fff;
-      margin: 20px auto;
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #000;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .map img {
+      width: 80%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+    .services {
+      background: #ffffff;
       padding: 20px;
-      max-width: 1000px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 900px;
       border-radius: 10px;
       box-shadow: 0 0 10px #ccc;
     }
-    h2 {
+    .services h2 {
       color: #003366;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 8px 0;
-    }
     footer {
-      text-align: center;
-      padding: 20px;
-      color: #999;
+      margin-top: 40px;
+      color: #666;
       font-size: 0.9em;
+      line-height: 1.6;
+      padding: 20px;
     }
-    .map img {
-      width: 100%;
-      max-width: 800px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 8px;
-    }
-    @media screen and (max-width: 600px) {
-      header { font-size: 1.5em; }
-      .services, .contact, .station { padding: 15px; }
+    ul {
+      text-align: left;
+      padding-left: 20px;
     }
   </style>
 </head>
-
 <body>
-
-  <header>路加合同会社</header>
-
-  <div class="lang-switch">
-    <button onclick="setLang('ja')">日本語</button>
-    <button onclick="setLang('zh')">中文</button>
-  </div>
+  <header>
+    路加合同会社
+    <div class="lang-switch">
+      <button onclick="switchLang()">JP/中文</button>
+    </div>
+  </header>
 
   <div class="banner">
-    <img src="your-banner.jpg" alt="会社の宣伝画像">
-  </div>
-
-  <div class="services" id="services">
-    <h2>事業内容</h2>
-    <ul id="service-list">
-      <li>ビザ・資格外活動許可指導</li>
-      <li>来日ログイン、印章・銀行口座・法人登記・携帯契約サポート</li>
-      <li>国民年金・健康保険・厚生年金の申請・減免・免除サポート</li>
-      <li>医療用品・衛生用品・介護機器の輸出入・販売・製造</li>
-      <li>医薬品・漢方・健康食品の輸出入・販売</li>
-      <li>日用品・玩具・化粧品・家電・建築資材・食品の取扱</li>
-      <li>ネット通販・国内外運送・倉庫・梱包・通関</li>
-      <li>旅行・ホテル・飲食店の運営及び代理</li>
-      <li>不動産仲介・管理・コンサルティング</li>
-      <li>企業経営・起業コンサル</li>
-      <li>医療介護情報提供・老人ホーム運営</li>
-      <li>古物商・輸出入</li>
-    </ul>
+    <div class="banner-container">
+      <img src="images/banner.jpg" alt="会社の宣伝画像">
+      <div class="banner-text">路加合同会社</div>
+    </div>
   </div>
 
   <div class="map">
-    <img src="your-map.png" alt="会社地図">
+    <img src="images/map.png" alt="会社所在地マップ">
   </div>
 
-  <div class="contact">
-    <h2>連絡先</h2>
-    <p>電話：090-2904-1534 / 070-2243-9592</p>
-    <p>Email：gaob8405@gmail.com</p>
-    <p>微信客服ID：g17767743741</p>
-    <p>業務対応時間：平日9:00～20:00　土日祝9:00～18:00</p>
-  </div>
-
-  <div class="station">
-    <h2>最寄駅</h2>
-    <p>津守駅 / 今宮駅 / 花園町駅</p>
-  </div>
-
-  <footer>
-    無断転載・剽窃禁止　Copyright © 2025 路加合同会社
-  </footer>
-
-  <script>
-    const jpServices = `
+  <div class="services">
+    <h2>事業内容</h2>
+    <ul>
+      <li>生活サポート翻訳（病院同行・予約代行・役所手続き・運転免許申請など）</li>
       <li>ビザ・資格外活動許可指導</li>
       <li>来日ログイン、印章・銀行口座・法人登記・携帯契約サポート</li>
       <li>国民年金・健康保険・厚生年金の申請・減免・免除サポート</li>
-      <li>医療用品・衛生用品・介護機器の輸出入・販売・製造</li>
-      <li>医薬品・漢方・健康食品の輸出入・販売</li>
-      <li>日用品・玩具・化粧品・家電・建築資材・食品の取扱</li>
-      <li>ネット通販・国内外運送・倉庫・梱包・通関</li>
-      <li>旅行・ホテル・飲食店の運営及び代理</li>
-      <li>不動産仲介・管理・コンサルティング</li>
-      <li>企業経営・起業コンサル</li>
-      <li>医療介護情報提供・老人ホーム運営</li>
-      <li>古物商・輸出入</li>
-    `;
-    const cnServices = `
-      <li>签证及资格外活动许可指导</li>
-      <li>来日登录、印章、银行账户、法人登记、手机卡申请指导</li>
-      <li>国民年金、健康保险、厚生年金申请、减免、免除咨询</li>
-      <li>医疗用品、卫生用品、介护设备的出口入、销售、制造</li>
-      <li>医药品、汉方、健康食品的出口入、销售</li>
-      <li>日用品、玩具、化妆品、家电、建筑材料、食品等贸易</li>
-      <li>网购代购、国际国内货运、仓储、报关、包装</li>
-      <li>旅行、酒店、餐饮代理与运营</li>
-      <li>房产中介、管理、顾问服务</li>
-      <li>企业经营、创业咨询</li>
-      <li>医疗介护信息提供、老人院运营</li>
-      <li>二手物品买卖、代理及进出口</li>
-    `;
-    function setLang(lang) {
-      document.getElementById('service-list').innerHTML = lang === 'zh' ? cnServices : jpServices;
+      <li>中国スマホGoogleフレームワーク・ソフトインストールサポート</li>
+      <li>医療用品、医療機器、衛生用品、介護用品及び関連商品の企画・製造・販売・輸出入</li>
+      <li>医薬品・漢方・健康食品・栄養食品の企画・開発・販売・輸出入</li>
+      <li>日用品・化粧品・玩具・アパレル製品・雑貨・電子製品の企画・販売・輸出入</li>
+      <li>国内・国際貨物運送、梱包、倉庫、通関業</li>
+      <li>旅行業・宿泊施設及び飲食店運営</li>
+      <li>国家戦略特区住宅宿泊事業</li>
+      <li>不動産の売買・仲介・賃貸及びコンサルティング</li>
+      <li>起業・経営コンサルティング</li>
+      <li>医療・介護に関する情報提供とコンサルティング</li>
+      <li>古物の売買・代理・輸出入</li>
+    </ul>
+  </div>
+
+  <footer>
+    所在地：大阪市<br>
+    最寄駅：津守駅 / 今宮駅 / 花園町駅<br><br>
+    📞 090-2904-1534 / 070-2243-9592<br>
+    📧 gaob8405@gmail.com<br>
+    📱 WeChat ID：g17767743741<br><br>
+    業務対応時間：平日 9:00〜20:00 / 土日祝 9:00〜18:00<br><br>
+    無断転載・剽窃禁止 Copyright © 2025 路加合同会社
+  </footer>
+
+  <script>
+    function switchLang() {
+      alert("※多言語版準備中です。");
     }
   </script>
-
 </body>
 </html>
