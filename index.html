@@ -2,31 +2,50 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>路加合同会社</title>
   <style>
     body {
-      font-family: "Arial", sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
 
-    .banner-container {
-      width: 100%;
-      background-color: black;
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+    }
+
+    nav {
       display: flex;
       justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5em 1em;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      max-height: 450px;
       overflow: hidden;
     }
 
-    .banner-container img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    .banner-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .banner img {
+      width: auto;
+      height: 100%;
+      max-height: 450px;
     }
 
     .banner-text {
@@ -35,95 +54,122 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      font-size: 48px;
+      font-size: 2em;
       font-weight: bold;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-      pointer-events: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.5em 1em;
+      border-radius: 10px;
     }
 
-    .content {
-      width: 100%;
-      max-width: 1000px;
-      background-color: white;
-      padding: 30px;
-      margin: 30px auto;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .services h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .services ul {
-      list-style: disc inside;
-      text-align: left;
-      margin: 0 auto;
+    .section {
+      padding: 2em;
       max-width: 800px;
+      margin: auto;
     }
 
     .map img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
-      margin: 30px 0;
-      border-radius: 8px;
+      max-width: 600px;
     }
 
     footer {
-      font-size: 14px;
-      color: #555;
-      margin: 30px auto;
-      max-width: 800px;
-      text-align: center;
+      background-color: #f0f0f0;
+      padding: 1.5em;
+      font-size: 0.9em;
+      line-height: 1.6;
+    }
+
+    form {
+      margin-top: 2em;
+    }
+
+    form input, form textarea {
+      display: block;
+      width: 80%;
+      max-width: 500px;
+      margin: 1em auto;
+      padding: 0.5em;
+    }
+
+    form button {
+      padding: 0.5em 2em;
+    }
+
+    .lang-switch {
+      margin-top: 1em;
     }
   </style>
 </head>
 <body>
-
-  <!-- 横幅图片与公司名称 -->
-<div class="banner-container" style="position: relative;">
-  <img src="imagesbanner.jpg" alt="横幅">
-  <div class="banner-text">路加合同会社</div>
-</div>
-
-  <!-- 主体内容 -->
-  <div class="content">
-    <div class="services">
-      <h2>事業内容</h2>
-      <ul>
-        <li>生活サポート翻訳（病院同行・予約代行・役所手続き・運転免許申請など）</li>
-        <li>ビザ・資格外活動許可指導</li>
-        <li>来日ログイン、印章・銀行口座・法人登記・携帯契約サポート</li>
-        <li>国民年金・健康保険・厚生年金の申請・減免・免除サポート</li>
-        <li>医療用品、医療機器、衛生用品、介護用品及び関連商品の企画・製造・販売・輸出入</li>
-        <li>医薬品・漢方・健康食品・栄養食品の企画・開発・販売・輸出入</li>
-        <li>日用品・化粧品・玩具・アパレル製品・雑貨・電子製品の企画・販売・輸出入</li>
-        <li>国内・国際貨物運送、梱包、倉庫、通関業</li>
-        <li>旅行業・宿泊施設及び飲食店運営</li>
-        <li>国家戦略特区住宅宿泊事業</li>
-        <li>不動産の売買・仲介・賃貸及びコンサルティング</li>
-        <li>起業・経営コンサルティング</li>
-        <li>医療・介護に関する情報提供とコンサルティング</li>
-        <li>古物の売買・代理・輸出入</li>
-      </ul>
+  <header>
+    <h1>路加合同会社</h1>
+    <nav>
+      <a href="#services">事業内容</a>
+      <a href="#contact">お問い合わせ</a>
+      <a href="#map">所在地</a>
+    </nav>
+    <div class="lang-switch">
+      <button onclick="switchLang('ja')">日本語</button>
+      <button onclick="switchLang('zh')">中文</button>
     </div>
+  </header>
 
-  <div class="map">
+  <div class="banner">
+    <div class="banner-container">
+      <img src="images/imagesbanner.jpg" alt="会社の宣伝画像">
+      <div class="banner-text">路加合同会社</div>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <h2>事業内容</h2>
+    <ul>
+      <li>生活サポート翻訳（病院同行・予約代行・役所手続き・運転免許申請など）</li>
+      <li>ビザ・資格外活動許可指導</li>
+      <li>来日ログイン、印章・銀行口座・法人登記・携帯契約サポート</li>
+      <li>国民年金・健康保険・厚生年金の申請・減免・免除サポート</li>
+      <li>医療用品、医療機器、衛生用品、介護用品及び関連商品の企画・製造・販売・輸出入</li>
+      <li>医薬品・漢方・健康食品・栄養食品の企画・開発・販売・輸出入</li>
+      <li>日用品・化粧品・玩具・アパレル製品・雑貨・電子製品の企画・販売・輸出入</li>
+      <li>国内・国際貨物運送、梱包、倉庫、通関業</li>
+      <li>旅行業・宿泊施設及び飲食店運営</li>
+      <li>国家戦略特区住宅宿泊事業</li>
+      <li>不動産の売買・仲介・賃貸及びコンサルティング</li>
+      <li>起業・経営コンサルティング</li>
+      <li>医療・介護に関する情報提供とコンサルティング</li>
+      <li>古物の売買・代理・輸出入</li>
+    </ul>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>お問い合わせ</h2>
+    <form>
+      <input type="text" placeholder="お名前 / 姓名">
+      <input type="email" placeholder="メールアドレス / 电子邮件">
+      <textarea rows="4" placeholder="お問い合わせ内容 / 咨询内容"></textarea>
+      <button type="submit">送信 / 提交</button>
+    </form>
+  </section>
+
+  <section class="section map" id="map">
     <img src="images/imagesmap.png" alt="会社所在地マップ">
-  </div>
+  </section>
 
-    <footer>
-      所在地：大阪府大阪市西成区<br>
-      最寄駅：津守駅 / 今宮駅 / 花園町駅<br><br>
-      📞 090-2904-1534 / 070-2243-9592<br>
-      📧 gaob8405@gmail.com<br>
-      📱 WeChat ID：g17767743741<br><br>
-      業務対応時間：平日 9:00〜20:00 / 土日祝 9:00〜18:00<br><br>
-      無断転載・剽窃禁止 Copyright © 2025 路加合同会社
-    </footer>
-  </div>
+  <footer>
+    所在地：大阪府大阪市西成区<br>
+    最寄駅：津守駅 / 今宮駅 / 花園町駅<br><br>
+    📞 090-2904-1534 / 070-2243-9592<br>
+    📧 gaob8405@gmail.com<br>
+    📱 WeChat ID：g17767743741<br><br>
+    業務対応時間：平日 9:00∼20:00 / 土日祝 9:00∼18:00<br><br>
+    無断転載・剽窃禁止 Copyright © 2025 路加合同会社
+  </footer>
 
+  <script>
+    function switchLang(lang) {
+      alert('多语言切换功能可通过 JavaScript 国际化库实现，例如 i18next。当前仅为演示按钮。');
+    }
+  </script>
 </body>
 </html>
