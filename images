@@ -1,3 +1,0 @@
-git add images/banner.jpg images/map.png
-git commit -m "add images folder with banner and map"
-git push
