@@ -12,30 +12,18 @@
       padding: 0;
       text-align: center;
     }
-    header {
-      background: #003366;
-      color: white;
-      padding: 20px 0;
-      font-size: 2em;
-      position: relative;
-    }
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
     .banner {
-      margin: 20px 0;
+      margin: 0;
     }
     .banner-container {
       position: relative;
       display: inline-block;
-      width: 80%;
-      max-width: 800px;
+      width: 100%;
+      max-width: 100%;
     }
     .banner-container img {
       width: 100%;
-      border-radius: 10px;
+      height: auto;
     }
     .banner-text {
       position: absolute;
@@ -43,16 +31,17 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      font-size: 2.5em;
+      font-size: 3em;
       font-weight: bold;
-      text-shadow: 2px 2px 5px #000;
-      text-align: center;
+      text-shadow: 2px 2px 8px #000;
+      opacity: 0.8;
       white-space: nowrap;
     }
     .map img {
       width: 80%;
       max-width: 800px;
       border-radius: 10px;
+      margin: 20px 0;
     }
     .services {
       background: #ffffff;
@@ -80,12 +69,6 @@
   </style>
 </head>
 <body>
-  <header>
-    路加合同会社
-    <div class="lang-switch">
-      <button onclick="switchLang()">JP/中文</button>
-    </div>
-  </header>
 
   <div class="banner">
     <div class="banner-container">
@@ -98,6 +81,16 @@
     <img src="images/map.png" alt="会社所在地マップ">
   </div>
 
+  <footer>
+    所在地：大阪府大阪市西成区<br>
+    最寄駅：津守駅 / 今宮駅 / 花園町駅<br><br>
+    📞 090-2904-1534 / 070-2243-9592<br>
+    📧 gaob8405@gmail.com<br>
+    📱 WeChat ID：g17767743741<br><br>
+    業務対応時間：平日 9:00〜20:00 / 土日祝 9:00〜18:00<br><br>
+    無断転載・剽窃禁止 Copyright © 2025 路加合同会社
+  </footer>
+
   <div class="services">
     <h2>事業内容</h2>
     <ul>
@@ -105,7 +98,6 @@
       <li>ビザ・資格外活動許可指導</li>
       <li>来日ログイン、印章・銀行口座・法人登記・携帯契約サポート</li>
       <li>国民年金・健康保険・厚生年金の申請・減免・免除サポート</li>
-      <li>中国スマホGoogleフレームワーク・ソフトインストールサポート</li>
       <li>医療用品、医療機器、衛生用品、介護用品及び関連商品の企画・製造・販売・輸出入</li>
       <li>医薬品・漢方・健康食品・栄養食品の企画・開発・販売・輸出入</li>
       <li>日用品・化粧品・玩具・アパレル製品・雑貨・電子製品の企画・販売・輸出入</li>
@@ -119,20 +111,5 @@
     </ul>
   </div>
 
-  <footer>
-    所在地：大阪市<br>
-    最寄駅：津守駅 / 今宮駅 / 花園町駅<br><br>
-    📞 090-2904-1534 / 070-2243-9592<br>
-    📧 gaob8405@gmail.com<br>
-    📱 WeChat ID：g17767743741<br><br>
-    業務対応時間：平日 9:00〜20:00 / 土日祝 9:00〜18:00<br><br>
-    無断転載・剽窃禁止 Copyright © 2025 路加合同会社
-  </footer>
-
-  <script>
-    function switchLang() {
-      alert("※多言語版準備中です。");
-    }
-  </script>
 </body>
 </html>
